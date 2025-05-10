@@ -133,13 +133,13 @@ func CaptureWithCGo(call func()) (output []byte, err error) {
 		return nil, err
 	}
 	release := func() {
-		if e := syscall.Dup2(originalStdout, syscall.Stdout); e != nil {
+		if e := syscall.Dup3(originalStdout, syscall.Stdout); e != nil {
 			err = e
 		}
 		if e := syscall.Close(originalStdout); e != nil {
 			err = e
 		}
-		if e := syscall.Dup2(originalStderr, syscall.Stderr); e != nil {
+		if e := syscall.Dup3(originalStderr, syscall.Stderr); e != nil {
 			err = e
 		}
 		if e := syscall.Close(originalStderr); e != nil {
@@ -175,12 +175,12 @@ func CaptureWithCGo(call func()) (output []byte, err error) {
 		}
 	}()
 
-	if e := syscall.Dup2(int(w.Fd()), syscall.Stdout); e != nil {
+	if e := syscall.(int(w.Fd()), syscall.Stdout); e != nil {
 		lockStdFileDescriptorsSwapping.Unlock()
 
 		return nil, e
 	}
-	if e := syscall.Dup2(int(w.Fd()), syscall.Stderr); e != nil {
+	if e := syscall.Dup3(int(w.Fd()), syscall.Stderr); e != nil {
 		lockStdFileDescriptorsSwapping.Unlock()
 
 		return nil, e
