@@ -1,6 +1,6 @@
 module github.com/VirtualRoyalty/osutil
 
-go 1.24.1
+go 1.23.6
 
 require (
 	github.com/avast/retry-go v3.0.0+incompatible
