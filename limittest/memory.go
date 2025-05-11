@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/zimmski/VirtualRoyalty"
+	"github.com/VirtualRoyalty/osutil"
 )
 
 func main() {

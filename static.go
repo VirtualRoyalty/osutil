@@ -27,7 +27,7 @@ func RewriteStaticIndexFile(filePath string) (err error) {
 		return err
 	}
 
-	data = regexp.MustCompile(`(?s)(\t"golang.org/x/text/language"\n)`).ReplaceAll(data, []byte("\t\"github.com/zimmski/VirtualRoyalty\"\n$1"))
+	data = regexp.MustCompile(`(?s)(\t"golang.org/x/text/language"\n)`).ReplaceAll(data, []byte("\t\"github.com/VirtualRoyalty/osutil\"\n$1"))
 	data = regexp.MustCompile(`(?s)type StaticFilesFile struct {.+?}\n\s+`).ReplaceAll(data, []byte(""))
 	data = regexp.MustCompile(`StaticFilesFile`).ReplaceAll(data, []byte("osutil.StaticFile"))
 

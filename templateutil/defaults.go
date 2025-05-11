@@ -6,7 +6,7 @@ import (
 	"unicode"
 
 	"github.com/symflower/pretty"
-	"github.com/zimmski/VirtualRoyalty/bytesutil"
+	"github.com/VirtualRoyalty/osutil/bytesutil"
 )
 
 // DefaultFuncMap holds common template functions.
