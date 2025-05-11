@@ -1,4 +1,4 @@
-module github.com/zimmski/osutil
+module github.com/zimmski/VirtualRoyalty
 
 go 1.24.1
 

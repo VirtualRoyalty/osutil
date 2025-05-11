@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	pkgerrors "github.com/pkg/errors"
-	"github.com/zimmski/osutil"
+	"github.com/zimmski/VirtualRoyalty"
 )
 
 var errTrimIndentationsLastLine = errors.New("last line of input must be indented exactly one less than all other lines")

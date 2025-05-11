@@ -1,6 +1,6 @@
 export ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-export PACKAGE_BASE := github.com/zimmski/osutil
+export PACKAGE_BASE := github.com/zimmski/VirtualRoyalty
 export UNIT_TEST_TIMEOUT := 480
 
 ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
